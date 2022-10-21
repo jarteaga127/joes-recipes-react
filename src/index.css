@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Merriweather&display=swap");
+
+:root {
+  --light: #f2ebb6;
+  --light-2: #DBD399;
+  --green: #487569;
+  --green-2: #315048;
+  --brown: #382819;
+  --red: #cb3d4b;
+  --red-2: #6f2836;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Merriweather', serif;
+  color: var(--brown);
+}
+
+body {
+  background-color: var(--light);
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 64.01px;
+  padding: 1.75rem;
+}
+
+button {
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+}
+
+.App {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.add-recipe-btn, .view-more-less, .submit-btn {
+  
+  background-color: var(--green);
+  color: #fff;
+  transition: 0.3s ease-in-out;
+}
+
+.add-recipe-btn:hover, .view-more-less:hover, .submit-btn:hover {
+  
+  background-color: var(--green-2);
+ transition: 0.3s ease-in-out;
+}
+
+.add-recipe-btn {
+  margin-bottom: 2rem;
+}
+
+.recipes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  margin: 2rem auto;
+  padding: 2rem;
+  grid-gap: 1.5rem;
+  max-width: 1080px;
+}
+
+.recipe {
+  text-align: left;
+  background-color: #fff;
+  padding: .5rem 1rem;
+  border-radius: 8px;
+}
+
+h3 {
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 2rem;
+}
+
+h4 {
+  margin-bottom: 0.5rem;
+}
+
+ul, ol {
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+li {
+  line-height: 2;
+}
+
+label {
+  margin-bottom: 0.5rem;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  text-align: left;
+  transition: 0.3s ease-in-out;
+}
+
+.popup-inner {
+  background-color: #fff;
+  max-width: 1080px;
+  width: 100%;
+  height: auto;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+ overflow: auto;
+ max-height: calc(100vh - 4rem);
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group > button {
+  background-color: var(--green);
+  color: #fff;
+  transition: 0.3s ease-in-out;
+}
+
+.form-group > button:hover {
+  background-color: var(--green-2);
+  transition: 0.3s ease-in-out;
+}
+
+.form-group:last-of-type {
+  margin-bottom: 0;
+}
+
+input, textarea {
+  display: block;
+  width: 100%;
+  resize: vertical;
+  max-height: 200px;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.form-group > label {
+display: block;
+
+}
+
+.remove-recipe, .form-btn-cancel {
+  background-color: var(--red);
+  color: #fff;
+  transition: 0.3s ease-in-out;
+  margin-left: 1rem;
+}
+
+.remove-recipe:hover, .form-btn-cancel:hover {
+  background-color: var(--red-2);
+ transition: 0.3s ease-in-out;
+}
+
+@media (max-width: 1024px) {
+
+  body {
+    font-size: 20px;
+  }
+
+  button {
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 20px;
+  }
+  
+  .add-recipe-btn {
+    margin-bottom: 2rem;
+  }
+
+  .recipe {
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+  }
+  
+  
+  label {
+    margin-bottom: 0.5rem;
+  }
+  
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1rem 2rem;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    text-align: left;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .popup-inner {
+    background-color: #fff;
+    max-width: 1080px;
+    width: 100%;
+    height: auto;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+   overflow: auto;
+   max-height: calc(100vh - 4rem);
+  }
+  
+  
+  
+  .remove-recipe, .form-btn-cancel {
+    margin-left: 0;
+  }
+
+  .form-group > button {
+    width: 100%;
+  }
+  
+.buttons, .form-btn-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .buttons > button, .form-btn-group > button {
+    width: 100%;
+    padding: .75rem;
+    font-size: 20px;
+  }
+
+  input, textarea {
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+  }
+
+}
+
+
